@@ -1,0 +1,37 @@
+.card {
+  display: grid;
+  gap: var(--space-4);
+  min-height: 220px;
+  align-content: center;
+  padding: var(--space-5);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.card { perspective: 800px; }
+.flipped { animation: card-flip 420ms var(--ease-out); }
+@keyframes card-flip {
+  0% { transform: rotateY(0); }
+  50% { transform: rotateY(90deg) scale(0.97); }
+  100% { transform: rotateY(0); }
+}
+.front { font-family: var(--font-display); font-size: var(--text-xl); line-height: 1.35; }
+.back {
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--line);
+  font-size: var(--text-md);
+  line-height: 1.6;
+  animation: reveal var(--dur) var(--ease-out);
+}
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+.hint { text-align: center; color: var(--ink-soft); font-size: var(--text-sm); }
+.grades { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.gradeLabel { display: grid; justify-items: center; line-height: 1.2; }
+.gradeLabel small { font-size: var(--text-xs); font-weight: 400; opacity: 0.85; }
+
+.hero { justify-items: center; text-align: center; }
+.mark { font-size: 3rem; line-height: 1; }

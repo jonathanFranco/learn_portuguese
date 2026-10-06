@@ -1,0 +1,18 @@
+.hero { display: grid; gap: var(--space-2); justify-items: center; text-align: center; padding-top: var(--space-6); }
+.hero h1 { font-size: var(--text-2xl); }
+.mark { position: relative; font-size: 3rem; animation: pop var(--dur-slow) var(--ease-spring) both; }
+@keyframes pop { from { transform: scale(0.4) rotate(-12deg); opacity: 0; } }
+.xp {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+.achievement { display: flex; gap: var(--space-4); align-items: center; }
+/* Conquista entra depois da comemoração, com o ícone "carimbado". */
+.hero ~ .achievement { animation: unlock 700ms var(--ease-spring) 500ms both; }
+.achievement .icon { animation: stamp 600ms var(--ease-spring) 800ms both; }
+@keyframes unlock { from { opacity: 0; transform: translateY(16px) scale(0.92); } }
+@keyframes stamp { from { opacity: 0; transform: scale(2.2) rotate(-20deg); } }
+.icon { font-size: 2rem; }

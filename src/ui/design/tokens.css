@@ -1,0 +1,116 @@
+/* Design tokens — "caderno de campo". Papéis, não cores: componentes só usam var(--*). */
+:root {
+  --bg: #f7f4ec;
+  --surface: #fffdf8;
+  --surface-sunken: #efeadf;
+  --ink: #1f2a24;
+  --ink-soft: #5b6660;
+  --ink-faint: #6a726c;
+  --brand: #2f6b4f;
+  --brand-strong: #24563f;
+  --brand-soft: #dcebe1;
+  --on-brand: #ffffff;
+  --accent: #d99a2b;
+  --accent-soft: #f6e6c4;
+  /* Âmbar legível como texto (AA); --accent fica para preenchimentos. */
+  --accent-ink: #946010;
+  --correct: #237347;
+  --correct-soft: #dff0e5;
+  --wrong: #a64837;
+  --wrong-soft: #f6e1dc;
+  --line: #e5dfd1;
+  --focus: #2f6b4f;
+
+  --font-display: 'Nunito Variable', system-ui, sans-serif;
+  --font-body: 'Nunito Variable', system-ui, sans-serif;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+  --text-2xl: 2.125rem;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+  --shadow: 0 1px 2px rgb(31 42 36 / 0.06), 0 2px 8px rgb(31 42 36 / 0.04);
+
+  --content-width: 640px;
+  --tap: 48px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Passa um pouco do alvo e volta: para "pops" de feedback. */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 150ms;
+  --dur: 250ms;
+  --dur-slow: 600ms;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #141a17;
+    --surface: #1c2420;
+    --surface-sunken: #111613;
+    --ink: #e9ece6;
+    --ink-soft: #a7b0aa;
+    --ink-faint: #75807a;
+    --brand: #6fb38f;
+    --brand-strong: #8cc7a6;
+    --brand-soft: #23382d;
+    --on-brand: #0f1a14;
+    --accent: #e3ae4f;
+    --accent-soft: #3a2f1a;
+    --accent-ink: #e3ae4f;
+    --correct: #6fc08f;
+    --correct-soft: #1f3528;
+    --wrong: #e08877;
+    --wrong-soft: #3b231f;
+    --line: #2c3631;
+    --focus: #8cc7a6;
+    --shadow: none;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #141a17;
+  --surface: #1c2420;
+  --surface-sunken: #111613;
+  --ink: #e9ece6;
+  --ink-soft: #a7b0aa;
+  --ink-faint: #75807a;
+  --brand: #6fb38f;
+  --brand-strong: #8cc7a6;
+  --brand-soft: #23382d;
+  --on-brand: #0f1a14;
+  --accent: #e3ae4f;
+  --accent-soft: #3a2f1a;
+  --accent-ink: #e3ae4f;
+  --correct: #6fc08f;
+  --correct-soft: #1f3528;
+  --wrong: #e08877;
+  --wrong-soft: #3b231f;
+  --line: #2c3631;
+  --focus: #8cc7a6;
+  --shadow: none;
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+    --dur-slow: 0ms;
+  }
+}

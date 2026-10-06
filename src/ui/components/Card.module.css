@@ -1,0 +1,10 @@
+.card {
+  padding: var(--space-5);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.plain {}
+.brand { background: var(--brand-soft); border-color: transparent; }
+.accent { background: var(--accent-soft); border-color: transparent; }

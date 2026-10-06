@@ -1,0 +1,670 @@
+import type { Flashcard, Lesson, Question } from '../../domain/types';
+
+const topicId = 'regencia-nominal';
+
+export const lessons: Lesson[] = [
+  {
+    id: 'rn-l-conceito',
+    topicId,
+    skillId: 'rn-conceito',
+    title: 'Nomes que pedem preposição',
+    summary:
+      'Regência nominal é a relação entre um **nome** — substantivo, adjetivo ou advérbio — e o termo que completa o seu sentido, o **complemento nominal**. Esse complemento vem **sempre com preposição**.',
+    examples: [
+      {
+        sentence: 'Tenho confiança em você.',
+        breakdown: ['“confiança” (substantivo) pede complemento: confiança **em** quem?', '“em você” → complemento nominal', 'Mesma família: confiar **em**'],
+      },
+      {
+        sentence: 'O curso é útil aos candidatos.',
+        breakdown: ['“útil” (adjetivo) → útil **a** alguém', '**a** + **os** candidatos = **aos** candidatos'],
+      },
+      {
+        sentence: 'O respeito às normas é obrigatório.',
+        breakdown: ['O verbo dispensa preposição: “respeitar **as** normas”', 'O nome exige: respeito **a** + **as** normas = **às** normas'],
+        note: 'Nome derivado de verbo transitivo direto passa a pedir preposição.',
+      },
+    ],
+    deepDive:
+      'Nomes da mesma família **costumam** herdar a regência: obedecer **a** → obediência **a**; necessitar **de** → necessidade **de**; favorável **a** → favoravelmente **a**. Nem sempre a correspondência é exata: preferir algo **a** algo → preferência **a** ou **por** algo (o nome aceita uma preposição que o verbo não usa).\n\nSe o verbo é **transitivo direto**, o nome passa a exigir preposição: “construir **a** ponte” → “construção **da** ponte”; “respeitar **as** normas” → “respeito **às** normas”.\n\nNem todo termo com preposição depois de um nome é regência: em “relógio **de ouro**” ou “casa **de Pedro**”, o termo só caracteriza (matéria, posse) → adjunto adnominal.',
+    tips: [
+      {
+        kind: 'cobranca',
+        text: 'A regência nominal aparece muito **dentro de questões de crase**: “favorável **à** proposta”, “respeito **às** normas”, “atendimento **ao** público”. Em certo/errado, é comum afirmar que o acento grave poderia ser suprimido: se o nome exige “a” e o termo seguinte exige artigo, o item está errado.',
+      },
+      {
+        kind: 'cobranca',
+        text: 'Em múltipla escolha, é comum pedir a frase em que a preposição é **exigida por um nome**, misturando-a com preposições exigidas por verbos (“gosto **de**”) e com termos que apenas caracterizam (“relógio **de** ouro”).',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado: o verbo pode dispensar preposição e o nome da mesma família exigi-la. “Respeitar **as** leis” está certo, mas “o respeito **as** leis” não: o correto é “respeito **às** leis”.',
+      },
+      {
+        kind: 'macete',
+        text: 'Procure o **verbo ou adjetivo da mesma família** e veja que preposição ele pede: confiar **em** → confiança **em**; favorável **a** → favoravelmente **a**. Se o verbo for transitivo direto, o nome passará a pedir preposição (em geral **de** ou **a**).',
+      },
+    ],
+  },
+  {
+    id: 'rn-l-preposicoes',
+    topicId,
+    skillId: 'rn-preposicoes',
+    title: 'A preposição certa',
+    summary:
+      'Cada nome pede a sua preposição — e **muitos aceitam mais de uma** (apto **a**/**para**, devoto **a**/**de**). O que a prova costuma cobrar são as combinações **impossíveis**, como “preferível **do que**”.',
+    examples: [
+      {
+        sentence: 'É preferível estudar a decorar.',
+        breakdown: ['preferível **a** (nunca “do que”)', 'Errado: “É preferível estudar **do que** decorar”', 'Evite também “**mais** preferível”: a ideia de comparação já está no adjetivo'],
+      },
+      {
+        sentence: 'O sistema é compatível com o antigo e acessível a todos.',
+        breakdown: ['compatível **com**', 'acessível **a**'],
+      },
+      {
+        sentence: 'Ela é residente em Salvador, mas natural de Recife.',
+        breakdown: ['residente **em**, situado **em** → lugar onde', 'natural **de** → origem'],
+      },
+    ],
+    deepDive:
+      '**Regências mais cobradas:** preferível **a** · compatível **com** · contrário **a** · passível **de** · ciente **de** · acessível **a** · alheio **a** · residente / situado **em**.\n\n**Nomes que aceitam mais de uma preposição (todas corretas):** apto **a/para** · ansioso **por/para** · devoto **a/de** · imune **a/de** · capaz **de/para** · união **com/entre**.\n\nDicionários de regência registram muitas variações; só trate como erro a preposição que o nome **não admite**. Em endereços, a gramática tradicional recomenda **em** (“residente **na** Rua das Flores”); a forma com “à” (“residente **à** Rua…”) é condenada por muitos gramáticos, embora outros a aceitem — em prova, prefira “em”.',
+    tips: [
+      {
+        kind: 'cobranca',
+        text: 'O formato mais comum é a lacuna múltipla: “assinale a alternativa que preenche, correta e respectivamente, as lacunas”, com nomes como **contrário**, **compatível**, **passível** e **preferível**. Resolva primeiro a lacuna mais segura e elimine alternativas.',
+      },
+      {
+        kind: 'cobranca',
+        text: 'Em certo/errado, é comum propor a troca de uma preposição por outra e perguntar se a correção se mantém. Se o nome admite as duas (apto **a**/**para**, devoto **a**/**de**), a correção se mantém.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado com **preferível**: não aceita “do que” nem intensificador. “É **mais** preferível sair **do que** ficar” tem dois problemas; o correto é “É preferível sair **a** ficar”.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado: não marque como erro uma preposição só porque outra é mais comum. “Devoto **de** São Jorge” e “devoto **a** São Jorge”, “ansioso **por** notícias” e “ansioso **para** chegar” estão todos corretos.',
+      },
+      {
+        kind: 'macete',
+        text: 'Lugar onde alguém mora ou algo está → **em**: residente **na** rua, situado **no** centro. Origem → **de**: natural **de** Recife. Comparação com preferível → **a**: “isto **a** aquilo”.',
+      },
+    ],
+  },
+  {
+    id: 'rn-l-relativo',
+    topicId,
+    skillId: 'rn-relativo',
+    title: 'Regência nominal com pronome relativo',
+    summary:
+      'Se um nome dentro da oração adjetiva pede preposição, ela vai **antes do pronome relativo**: “o direito **a que** faço jus”, “a pessoa **em quem** tenho confiança”.',
+    examples: [
+      {
+        sentence: 'Este é o direito a que faço jus.',
+        breakdown: ['Oração: faço jus **a** um direito', '“jus” pede **a** → a preposição vai para antes do “que”', 'Errado: “o direito **que** faço jus”'],
+      },
+      {
+        sentence: 'É uma regra de que tenho conhecimento.',
+        breakdown: ['tenho conhecimento **de** uma regra', '→ “regra **de que** tenho conhecimento”'],
+      },
+      {
+        sentence: 'Foi uma decisão com a qual fiquei satisfeito.',
+        breakdown: ['fiquei satisfeito **com** a decisão', '“**com que**” ou “**com a qual**”: as duas formas estão corretas'],
+      },
+    ],
+    deepDive:
+      'Passo a passo: 1) isole a oração adjetiva; 2) troque o relativo pelo antecedente (“tenho conhecimento **da regra**”); 3) a preposição que aparecer vai antes do relativo.\n\nCom **o qual / a qual**, pode surgir crase: “a empresa **à qual** sou grato” (grato **a** + **a** qual).\n\nCom **cujo**, a preposição vem antes e não há artigo depois: “o autor **a cuja** obra fiz referência” — nunca “cuja a”, nem “à cuja”.\n\nO mesmo vale para verbos: “o projeto **com que** concordo” (concordar **com**).',
+    tips: [
+      {
+        kind: 'cobranca',
+        text: 'É comum aparecer o relativo **sem a preposição** que o nome exige (“o benefício **que** faz jus”, “o cargo **que** está apto”) para você apontar o erro — em múltipla escolha, como “assinale a frase correta”; em certo/errado, como reescrita que junta duas orações com um relativo.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado: a preposição é exigida pelo termo **da oração adjetiva**, não pelo antecedente. Em “o cargo **a que** estou apto”, o “a” vem de “apto”, não de “cargo”.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado com **cujo**: a preposição pedida pelo nome vem antes dele, e “cujo” nunca é seguido de artigo. “O autor **a cuja** obra fiz referência” ✓; “à cuja obra” e “cuja a obra” ✗.',
+      },
+      {
+        kind: 'macete',
+        text: 'Troque o relativo pelo antecedente e leia em ordem direta: “o direito ___ que faço jus” → “faço jus **ao** direito” → “o direito **a que** faço jus”.',
+      },
+    ],
+  },
+  {
+    id: 'rn-l-paralelismo',
+    topicId,
+    skillId: 'rn-paralelismo',
+    title: 'Dois nomes, preposições diferentes',
+    summary:
+      'Dois nomes (ou um verbo e um nome) só podem **compartilhar um complemento** se pedirem a **mesma preposição**. Se pedirem preposições diferentes, a norma-padrão dá a cada um a sua.',
+    examples: [
+      {
+        sentence: 'Sou fiel e grato à empresa.',
+        breakdown: ['fiel **a**; grato **a** → mesma preposição', 'Podem compartilhar o complemento: “**à** empresa”'],
+      },
+      {
+        sentence: 'Sou favorável ao projeto e participo dele.',
+        breakdown: [
+          'favorável **a** (nome); participar **de** (verbo) → preposições diferentes',
+          'Inadequado na norma-padrão: “Sou favorável e participo do projeto”',
+          'Cada termo com a sua preposição; o complemento é retomado por pronome: “**dele**”',
+        ],
+      },
+    ],
+    deepDive:
+      'O problema aparece entre dois nomes (“interessado e satisfeito com…”), entre **verbo e nome** (“Sou favorável e participo do projeto”) e entre dois verbos (“Conheço e confio no método” — conhecer pede objeto direto; confiar, **em**).\n\nCorreção padrão: complemento completo com o primeiro termo e **pronome** retomando-o no segundo: “Conheço o método e confio **nele**.”\n\nNa fala, a construção com um só complemento é comum; em prova, a forma esperada é a da norma-padrão.',
+    tips: [
+      {
+        kind: 'cobranca',
+        text: 'Em certo/errado, é comum apresentar dois termos coordenados com um só complemento (“interessado e satisfeito com…”) e perguntar se a frase está de acordo com a norma-padrão. Em múltipla escolha, aparece como reescrita: a correta dá a cada termo a sua preposição.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado: nem toda coordenação é erro. Se os dois termos pedem a **mesma** preposição, o complemento comum está correto: “fiel e grato **à** empresa”, “contrário e oposto **à** medida”.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado com o par **verbo + nome**: “Confio e sou grato ao meu chefe” junta confiar **em** com grato **a**. Na norma-padrão: “Confio **no** meu chefe e sou grato **a ele**”.',
+      },
+      {
+        kind: 'macete',
+        text: 'Teste **cada termo sozinho** com o complemento: “interessado **com** o resultado”? Não funciona → não pode compartilhar. Reescreva com pronome: “interessado **no** resultado e satisfeito **com ele**”.',
+      },
+    ],
+  },
+];
+
+export const questions: Question[] = [
+  // ── Nomes que pedem preposição ──
+  {
+    id: 'rn-01',
+    topicId,
+    skillId: 'rn-conceito',
+    difficulty: 1,
+    type: 'true_false',
+    statement: 'Na regência nominal, o termo que exige a preposição é um **nome**: substantivo, adjetivo ou advérbio.',
+    correct: true,
+    explanation: 'Regência nominal = nome + complemento preposicionado: “confiança **em** você” (substantivo), “útil **a** todos” (adjetivo), “favoravelmente **ao** réu” (advérbio). Se quem exige é verbo, a regência é verbal.',
+  },
+  {
+    id: 'rn-02',
+    topicId,
+    skillId: 'rn-conceito',
+    difficulty: 1,
+    type: 'multiple_choice',
+    statement: 'Assinale a frase em que a preposição destacada é exigida por um **nome**.',
+    alternatives: [
+      { id: 'A', text: 'Gosto **de** música.', whyWrong: 'Quem pede “de” é o **verbo** gostar (gostar de algo): regência verbal.' },
+      { id: 'B', text: 'Tenho necessidade **de** descanso.' },
+      { id: 'C', text: 'Chegou **de** madrugada.', whyWrong: '“De madrugada” é expressão de tempo (adjunto adverbial); não completa o sentido de nenhum nome.' },
+      { id: 'D', text: 'Preciso **de** ajuda.', whyWrong: 'Quem pede “de” é o **verbo** precisar: regência verbal.' },
+      { id: 'E', text: 'Saí **de** casa cedo.', whyWrong: 'A preposição está ligada ao **verbo** sair (indica origem), não a um nome.' },
+    ],
+    correct: 'B',
+    explanation: 'O substantivo **necessidade** pede complemento: necessidade **de** quê? → “de descanso” (complemento nominal). Compare com o verbo da família: necessitar **de**.',
+  },
+  {
+    id: 'rn-03',
+    topicId,
+    skillId: 'rn-conceito',
+    difficulty: 2,
+    type: 'fill_blank',
+    statement: 'Complete corretamente:',
+    template: 'O relator votou favoravelmente ___ recurso.',
+    options: ['o', 'ao'],
+    correct: 'ao',
+    explanation: 'O advérbio herda a regência do adjetivo: favorável **a** → favoravelmente **a**. Preposição **a** + artigo **o** = **ao** recurso.',
+  },
+  {
+    id: 'rn-04',
+    topicId,
+    skillId: 'rn-conceito',
+    difficulty: 2,
+    type: 'identify_error',
+    statement: 'Toque no trecho com **erro de regência**.',
+    segments: ['A obediência', 'as normas', 'é dever', 'de todo servidor.'],
+    correct: 1,
+    explanation: '“Obediência” pede **a** (obedecer **a**, obediência **a**). Preposição **a** + artigo **as** = “obediência **às** normas”.',
+  },
+  {
+    id: 'rn-05',
+    topicId,
+    skillId: 'rn-conceito',
+    difficulty: 3,
+    type: 'multiple_choice',
+    statement: 'Assinale a alternativa em que a preposição destacada **não** é exigida pelo nome que a antecede.',
+    alternatives: [
+      { id: 'A', text: 'Tenho orgulho **de** você.', whyWrong: '“Orgulho” pede complemento: orgulho **de** alguém → complemento nominal, preposição exigida.' },
+      { id: 'B', text: 'Estava ansioso **por** notícias.', whyWrong: '“Ansioso” pede complemento: ansioso **por** algo → preposição exigida pelo adjetivo.' },
+      { id: 'C', text: 'Comprei um relógio **de** ouro.' },
+      { id: 'D', text: 'Ela é fiel **aos** princípios.', whyWrong: '“Fiel” pede **a**: fiel **a** algo → a preposição (fundida ao artigo) é exigida pelo adjetivo.' },
+      { id: 'E', text: 'Agiu contrariamente **ao** combinado.', whyWrong: 'O advérbio “contrariamente” pede **a** (como “contrário a”) → preposição exigida.' },
+    ],
+    correct: 'C',
+    explanation: '“De ouro” apenas **caracteriza** o relógio (indica a matéria) — é adjunto adnominal. “Relógio” não precisa de complemento para ter sentido completo; logo, não há regência nominal.',
+  },
+
+  // ── A preposição certa ──
+  {
+    id: 'rn-06',
+    topicId,
+    skillId: 'rn-preposicoes',
+    difficulty: 1,
+    type: 'fill_blank',
+    statement: 'Complete de acordo com a norma-padrão:',
+    template: 'Para mim, trabalhar em equipe é preferível ___ trabalhar sozinho.',
+    options: ['a', 'do que', 'que'],
+    correct: 'a',
+    explanation: '**Preferível** pede a preposição **a**: preferível **a** algo. “Preferível do que” e “preferível que” (na comparação) estão fora da norma-padrão.',
+  },
+  {
+    id: 'rn-07',
+    topicId,
+    skillId: 'rn-preposicoes',
+    difficulty: 2,
+    type: 'identify_error',
+    statement: 'Toque no trecho com **erro de regência**.',
+    segments: ['A conduta', 'do servidor', 'é passível', 'a demissão.'],
+    correct: 3,
+    explanation: '**Passível** pede **de**: “passível **de** demissão”, “passível **de** punição”.',
+  },
+  {
+    id: 'rn-08',
+    topicId,
+    skillId: 'rn-preposicoes',
+    difficulty: 2,
+    type: 'multiple_choice',
+    statement:
+      'Assinale a alternativa que preenche, correta e respectivamente, as lacunas: “A medida é contrária ___ interesses da população, incompatível ___ a Constituição e passível ___ anulação.”',
+    alternatives: [
+      { id: 'A', text: 'aos – com – de' },
+      { id: 'B', text: 'com – com – de', whyWrong: '“Contrário” pede **a**: contrária **aos** interesses.' },
+      { id: 'C', text: 'aos – com – à', whyWrong: '“Passível” pede **de**: passível **de** anulação.' },
+      { id: 'D', text: 'aos – em – de', whyWrong: '“Incompatível” pede **com**: incompatível **com** a Constituição.' },
+      { id: 'E', text: 'pelos – com – de', whyWrong: '“Contrário” pede **a**, não “por”: contrária **aos** interesses.' },
+    ],
+    correct: 'A',
+    explanation: 'contrário **a** (+ os = **aos** interesses) · incompatível **com** · passível **de**.',
+  },
+  {
+    id: 'rn-09',
+    topicId,
+    skillId: 'rn-preposicoes',
+    difficulty: 2,
+    type: 'true_false',
+    statement: 'Em “Ela é devota a Santo Antônio.”, trocar “a” por “de” tornaria a frase incorreta.',
+    correct: false,
+    explanation: '**Devoto** admite **a** e **de**: “devota **a** Santo Antônio” e “devota **de** Santo Antônio” estão corretas. Muitos nomes aceitam mais de uma preposição.',
+  },
+  {
+    id: 'rn-10',
+    topicId,
+    skillId: 'rn-preposicoes',
+    difficulty: 3,
+    type: 'multiple_choice',
+    statement: 'Assinale a alternativa em que **todas** as preposições estão de acordo com a regência dos nomes na norma-padrão.',
+    alternatives: [
+      { id: 'A', text: 'Tenho aversão a mentiras e sou alheio com fofocas.', whyWrong: '“Alheio” não se constrói com “com”: alheio **a** fofocas (“aversão a” está certo).' },
+      { id: 'B', text: 'Ela é natural de Recife e residente em Salvador.' },
+      { id: 'C', text: 'O projeto é compatível com a lei e preferível do que o anterior.', whyWrong: '“Preferível” pede **a**: preferível **ao** anterior. “Do que” está fora da norma-padrão.' },
+      { id: 'D', text: 'Estou ciente com as regras e apto para o cargo.', whyWrong: '“Ciente” pede **de**: ciente **das** regras (“apto para” está certo).' },
+      { id: 'E', text: 'O remédio é eficaz contra a gripe e nocivo com o fígado.', whyWrong: '“Nocivo” não se constrói com “com”: nocivo **ao** fígado.' },
+    ],
+    correct: 'B',
+    explanation: 'natural **de** (origem) e residente **em** (lugar onde se mora). Nas demais, há sempre uma preposição que o nome não admite.',
+  },
+
+  // ── Com pronome relativo ──
+  {
+    id: 'rn-11',
+    topicId,
+    skillId: 'rn-relativo',
+    difficulty: 1,
+    type: 'fill_blank',
+    statement: 'Complete corretamente:',
+    template: 'Este é o material ___ que tenho necessidade.',
+    options: ['a', 'de', 'com'],
+    correct: 'de',
+    explanation: 'Tenho necessidade **de** algo → “o material **de que** tenho necessidade”. A preposição exigida pelo nome vai antes do relativo.',
+  },
+  {
+    id: 'rn-12',
+    topicId,
+    skillId: 'rn-relativo',
+    difficulty: 2,
+    type: 'multiple_choice',
+    statement: 'Assinale a frase **correta** quanto à regência nominal.',
+    alternatives: [
+      { id: 'A', text: 'O cargo que ele está apto exige experiência.', whyWrong: 'Apto **a**/**para** o cargo → “o cargo **a que** (ou **para o qual**) ele está apto”.' },
+      { id: 'B', text: 'Esta é a pessoa em quem tenho mais confiança.' },
+      { id: 'C', text: 'A regra que tenho conhecimento é antiga.', whyWrong: 'Tenho conhecimento **da** regra → “a regra **de que** tenho conhecimento”.' },
+      { id: 'D', text: 'O resultado que fiquei satisfeito saiu ontem.', whyWrong: 'Satisfeito **com** o resultado → “o resultado **com que** fiquei satisfeito”.' },
+      { id: 'E', text: 'Os princípios que sou fiel não mudam.', whyWrong: 'Fiel **aos** princípios → “os princípios **a que** (ou **aos quais**) sou fiel”.' },
+    ],
+    correct: 'B',
+    explanation: 'Tenho confiança **na** pessoa → “a pessoa **em quem** tenho confiança”. A preposição pedida por “confiança” vem antes do relativo.',
+  },
+  {
+    id: 'rn-13',
+    topicId,
+    skillId: 'rn-relativo',
+    difficulty: 2,
+    type: 'identify_error',
+    statement: 'Toque no trecho com **erro de regência**.',
+    segments: ['Esse é', 'o benefício', 'que fazemos jus', 'desde 2020.'],
+    correct: 2,
+    explanation: 'Fazer jus **a** algo → “o benefício **a que** fazemos jus” (ou “**ao qual** fazemos jus”). Faltou a preposição antes do relativo.',
+  },
+  {
+    id: 'rn-14',
+    topicId,
+    skillId: 'rn-relativo',
+    difficulty: 2,
+    type: 'true_false',
+    statement: 'Em “A empresa à qual sou grato encerrou as atividades.”, o acento grave está correto.',
+    correct: true,
+    explanation: 'Grato **a** + **a** qual (antecedente feminino: a empresa) = **à qual**. Teste com masculino: “o banco **ao qual** sou grato”.',
+  },
+  {
+    id: 'rn-15',
+    topicId,
+    skillId: 'rn-relativo',
+    difficulty: 3,
+    type: 'multiple_choice',
+    statement: 'Assinale a alternativa que completa corretamente a frase: “O autor ___ obra fiz referência recebeu um prêmio.”',
+    alternatives: [
+      { id: 'A', text: 'cuja', whyWrong: 'Faltou a preposição: fiz referência **a** algo → “**a** cuja obra”.' },
+      { id: 'B', text: 'a cuja' },
+      { id: 'C', text: 'à cuja', whyWrong: '“Cujo” não admite artigo antes; sem artigo, não há crase.' },
+      { id: 'D', text: 'de cuja', whyWrong: '“Referência” pede **a** (referência **a** algo), não “de”.' },
+      { id: 'E', text: 'cuja a', whyWrong: '“Cujo” nunca é seguido de artigo, e ainda faltou a preposição exigida por “referência”.' },
+    ],
+    correct: 'B',
+    explanation: 'Fiz referência **à obra do autor** → “o autor **a cuja** obra fiz referência”. A preposição pedida pelo nome vai antes de “cuja”, que não admite artigo nem antes nem depois.',
+  },
+
+  // ── Paralelismo de regência ──
+  {
+    id: 'rn-16',
+    topicId,
+    skillId: 'rn-paralelismo',
+    difficulty: 1,
+    type: 'true_false',
+    statement: 'Em “O réu é passível e merecedor de punição.”, os dois adjetivos podem compartilhar o complemento, pois ambos pedem a preposição “de”.',
+    correct: true,
+    explanation: 'passível **de** e merecedor **de** → mesma preposição. Nesse caso, um único complemento serve aos dois termos.',
+  },
+  {
+    id: 'rn-17',
+    topicId,
+    skillId: 'rn-paralelismo',
+    difficulty: 2,
+    type: 'true_false',
+    statement: 'A frase “Estou interessado e satisfeito com o resultado.” está de acordo com a norma-padrão quanto à regência.',
+    correct: false,
+    explanation: 'interessado **em**; satisfeito **com** → preposições diferentes. Na norma-padrão: “Estou interessado **no** resultado e satisfeito **com ele**”.',
+  },
+  {
+    id: 'rn-18',
+    topicId,
+    skillId: 'rn-paralelismo',
+    difficulty: 2,
+    type: 'fill_blank',
+    statement: 'Complete a frase, retomando o complemento com pronome:',
+    template: 'Os moradores apoiam o projeto e são favoráveis ___.',
+    options: ['a ele', 'dele', 'nele'],
+    correct: 'a ele',
+    explanation: '“Apoiar” pede objeto direto (apoiar **o** projeto), mas “favorável” pede **a** → “favoráveis **a ele**”. Como as regências diferem, cada termo recebe a sua.',
+  },
+  {
+    id: 'rn-19',
+    topicId,
+    skillId: 'rn-paralelismo',
+    difficulty: 2,
+    type: 'multiple_choice',
+    statement: 'Assinale a frase que respeita a regência na norma-padrão.',
+    alternatives: [
+      { id: 'A', text: 'Tenho admiração e confiança em você.', whyWrong: '“Admiração” não se constrói com “em”: “Tenho admiração **por** você e confiança **em** você”.' },
+      { id: 'B', text: 'Conheço e concordo com as regras.', whyWrong: '“Conhecer” pede objeto direto; “concordar”, **com**: “Conheço as regras e concordo **com** elas”.' },
+      { id: 'C', text: 'Estou apto e ansioso pelo cargo.', whyWrong: '“Apto” pede **a**/**para**, não “por”: “Estou apto **para** o cargo e ansioso **por** ele”.' },
+      { id: 'D', text: 'Sou contrário e me oponho à proposta.' },
+      { id: 'E', text: 'Sou natural e residente em Belém.', whyWrong: '“Natural” pede **de**: “Sou natural **de** Belém e residente **na** cidade”.' },
+    ],
+    correct: 'D',
+    explanation: 'contrário **a** e opor-se **a** → mesma preposição; por isso podem compartilhar o complemento “**à** proposta”.',
+  },
+  {
+    id: 'rn-20',
+    topicId,
+    skillId: 'rn-paralelismo',
+    difficulty: 3,
+    type: 'multiple_choice',
+    statement: 'Assinale a reescrita que adequa à norma-padrão a frase “O conselho foi contrário e desistiu da proposta.”',
+    alternatives: [
+      { id: 'A', text: 'O conselho foi contrário à proposta e desistiu dela.' },
+      { id: 'B', text: 'O conselho foi contrário com a proposta e desistiu dela.', whyWrong: '“Contrário” não se constrói com “com”: contrário **à** proposta.' },
+      { id: 'C', text: 'O conselho foi contrário à proposta e desistiu-a.', whyWrong: '“Desistir” pede **de** (desistir **de** algo); não aceita pronome de objeto direto.' },
+      { id: 'D', text: 'O conselho foi contrário a proposta e desistiu dela.', whyWrong: 'contrário **a** + **a** proposta (determinada, com artigo) = **à** proposta: faltou o acento grave.' },
+      { id: 'E', text: 'O conselho foi contrário e desistente da proposta.', whyWrong: 'Mantém o problema: “contrário” continua sem a sua preposição (**a**) e passa a compartilhar o “de” de “desistente”.' },
+    ],
+    correct: 'A',
+    explanation: 'contrário **a**; desistir **de** → preposições diferentes. Cada termo recebe a sua, e o complemento é retomado por pronome: “**à** proposta e desistiu **dela**”.',
+  },
+];
+
+export const flashcards: Flashcard[] = [
+  // ── Nomes que pedem preposição ──
+  {
+    id: 'rn-f-01',
+    topicId,
+    skillId: 'rn-conceito',
+    front: 'O que é regência nominal?',
+    back: 'A relação entre um **nome** (substantivo, adjetivo ou advérbio) e o termo que completa o seu sentido — o **complemento nominal**, sempre com **preposição**.\n“confiança **em** você”, “útil **a** todos”, “favoravelmente **ao** réu”.',
+  },
+  {
+    id: 'rn-f-02',
+    topicId,
+    skillId: 'rn-conceito',
+    front: 'Nome derivado de verbo transitivo direto pede preposição?',
+    back: '**Sim.** O verbo dispensa preposição, mas o nome a exige.\n“respeitar **as** leis” → “respeito **às** leis”; “construir a escola” → “construção **da** escola”.',
+  },
+  {
+    id: 'rn-f-03',
+    topicId,
+    skillId: 'rn-conceito',
+    front: 'Certo ou errado? _A obediência as normas é obrigatória._',
+    back: '**Errado.** Obediência pede **a** + **as** normas = “obediência **às** normas”.',
+  },
+  {
+    id: 'rn-f-04',
+    topicId,
+    skillId: 'rn-conceito',
+    front: 'Certo ou errado? _O juiz decidiu favoravelmente à defesa._',
+    back: '**Certo.** O advérbio herda a regência do adjetivo: favorável **a** → favoravelmente **a**.\n**a** + **a** defesa = **à** defesa.',
+  },
+  {
+    id: 'rn-f-05',
+    topicId,
+    skillId: 'rn-conceito',
+    front: 'Em “relógio de ouro”, há regência nominal?',
+    back: '**Não.** “De ouro” só indica a matéria; “relógio” não precisa de complemento → adjunto adnominal.\nRegência nominal = o nome **pede** complemento: “necessidade **de** ajuda”.',
+  },
+  {
+    id: 'rn-f-06',
+    topicId,
+    skillId: 'rn-conceito',
+    front: 'Qual o teste rápido para achar a preposição de um nome?',
+    back: 'Procure o **verbo ou adjetivo da mesma família**: confiar **em** → confiança **em**; obedecer **a** → obediência **a**.\nRessalva: se o verbo for transitivo direto, o nome passa a pedir preposição (respeitar as leis → respeito **às** leis).',
+  },
+  {
+    id: 'rn-f-07',
+    topicId,
+    skillId: 'rn-conceito',
+    front: 'Como costumam cobrar a regência nominal em prova?',
+    back: 'Muitas vezes **junto com a crase**: “favorável **à** proposta”, “respeito **às** normas”.\nPergunte: o nome pede “a”? O termo seguinte exige artigo? Dois “sim” = crase obrigatória.',
+  },
+
+  // ── A preposição certa ──
+  {
+    id: 'rn-f-08',
+    topicId,
+    skillId: 'rn-preposicoes',
+    front: '“Preferível” pede qual preposição?',
+    back: '**a** — “Estudar é preferível **a** decorar.”\nNunca “preferível **do que**” nem “**mais** preferível”: a comparação já está no adjetivo.',
+  },
+  {
+    id: 'rn-f-09',
+    topicId,
+    skillId: 'rn-preposicoes',
+    front: 'Certo ou errado? _O sistema novo é compatível com o antigo._',
+    back: '**Certo.** Compatível (e incompatível) pede **com**.',
+  },
+  {
+    id: 'rn-f-10',
+    topicId,
+    skillId: 'rn-preposicoes',
+    front: '“Imune” pede qual preposição?',
+    back: '**a** ou **de** — as duas são aceitas: “imune **a** críticas”, “imune **de** impostos”.',
+  },
+  {
+    id: 'rn-f-11',
+    topicId,
+    skillId: 'rn-preposicoes',
+    front: 'Certo ou errado? _Estou ciente com as novas regras._',
+    back: '**Errado.** Ciente pede **de**: “Estou ciente **das** novas regras”.',
+  },
+  {
+    id: 'rn-f-12',
+    topicId,
+    skillId: 'rn-preposicoes',
+    front: '“Residente” e “situado” pedem qual preposição?',
+    back: '**em** — “residente **na** Rua das Flores”, “situado **no** centro”.\nA forma com “à” (“residente à Rua…”) é condenada por muitos gramáticos (outros a aceitam); em prova, prefira “em”.',
+  },
+  {
+    id: 'rn-f-13',
+    topicId,
+    skillId: 'rn-preposicoes',
+    front: 'Cite nomes que aceitam mais de uma preposição.',
+    back: 'apto **a/para** · ansioso **por/para** · devoto **a/de** · imune **a/de** · capaz **de/para** · união **com/entre**.\nNão marque uma delas como erro só porque a outra é mais comum.',
+  },
+  {
+    id: 'rn-f-14',
+    topicId,
+    skillId: 'rn-preposicoes',
+    front: 'Certo ou errado? _O candidato está apto para o cargo._',
+    back: '**Certo.** Apto admite **a** e **para**: “apto **ao** cargo” e “apto **para** o cargo” estão corretos.',
+  },
+  {
+    id: 'rn-f-15',
+    topicId,
+    skillId: 'rn-preposicoes',
+    front: 'Como costumam cobrar a preposição dos nomes em prova?',
+    back: 'Em lacunas múltiplas ou em “assinale a frase correta”.\nElimine primeiro a combinação **impossível** (preferível **do que**, passível **a**, ciente **com**); não descarte uma alternativa só por usar outra preposição aceita (apto **a**/**para**).',
+  },
+
+  // ── Com pronome relativo ──
+  {
+    id: 'rn-f-16',
+    topicId,
+    skillId: 'rn-relativo',
+    front: 'Onde vai a preposição exigida por um nome numa oração com pronome relativo?',
+    back: '**Antes do relativo.**\n“Tenho confiança **nessa** pessoa” → “a pessoa **em quem** tenho confiança”.',
+  },
+  {
+    id: 'rn-f-17',
+    topicId,
+    skillId: 'rn-relativo',
+    front: 'Certo ou errado? _O direito que faço jus foi negado._',
+    back: '**Errado.** Fazer jus **a** algo → “o direito **a que** faço jus” (ou “**ao qual** faço jus”).',
+  },
+  {
+    id: 'rn-f-18',
+    topicId,
+    skillId: 'rn-relativo',
+    front: 'Complete: Este é o resultado ___ que fiquei satisfeito.',
+    back: '**com** — satisfeito **com** o resultado → “o resultado **com que** fiquei satisfeito”.',
+  },
+  {
+    id: 'rn-f-19',
+    topicId,
+    skillId: 'rn-relativo',
+    front: 'Certo ou errado? _São normas às quais estamos sujeitos._',
+    back: '**Certo.** Sujeito **a** + **as** quais = **às quais**.\nTeste com masculino: “regulamentos **aos quais** estamos sujeitos”.',
+  },
+  {
+    id: 'rn-f-20',
+    topicId,
+    skillId: 'rn-relativo',
+    front: 'Qual o teste para a preposição antes do relativo?',
+    back: 'Troque o relativo pelo antecedente e leia em ordem direta.\n“o cargo ___ que estou apto” → “estou apto **ao** cargo” → “o cargo **a que** estou apto”.',
+  },
+  {
+    id: 'rn-f-21',
+    topicId,
+    skillId: 'rn-relativo',
+    front: 'Complete: O escritor ___ obra sou admirador lançou um livro.',
+    back: '**de cuja** — admirador **da** obra do escritor → “**de cuja** obra”.\n“Cujo” não admite artigo: nunca “cuja a”.',
+  },
+  {
+    id: 'rn-f-22',
+    topicId,
+    skillId: 'rn-relativo',
+    front: 'Como costumam cobrar a regência nominal com relativo em prova?',
+    back: 'Com o relativo **sem a preposição** (“o cargo **que** está apto”, “o benefício **que** faz jus”) para você apontar o erro, ou em reescritas que juntam duas orações.\nRecoloque o antecedente depois do nome e veja a preposição.',
+  },
+
+  // ── Paralelismo de regência ──
+  {
+    id: 'rn-f-23',
+    topicId,
+    skillId: 'rn-paralelismo',
+    front: 'Dois nomes podem compartilhar o mesmo complemento?',
+    back: '**Só se pedirem a mesma preposição**: “fiel e grato **à** empresa” ✓.\nPreposições diferentes: cada um com a sua — “interessado **no** curso e satisfeito **com** ele”.',
+  },
+  {
+    id: 'rn-f-24',
+    topicId,
+    skillId: 'rn-paralelismo',
+    front: 'Certo ou errado? _Tenho simpatia e confiança no novo gerente._',
+    back: '**Errado** na norma-padrão. Simpatia não se constrói com “em”; confiança pede **em**.\n“Tenho simpatia **pelo** novo gerente e confiança **nele**.”',
+  },
+  {
+    id: 'rn-f-25',
+    topicId,
+    skillId: 'rn-paralelismo',
+    front: 'Certo ou errado? _A medida é contrária e prejudicial aos interesses do povo._',
+    back: '**Certo.** Contrário **a** e prejudicial **a** → mesma preposição; o complemento pode ser compartilhado.',
+  },
+  {
+    id: 'rn-f-26',
+    topicId,
+    skillId: 'rn-paralelismo',
+    front: 'Certo ou errado? _Gosto e sou fiel ao meu time._',
+    back: '**Errado** na norma-padrão. Gostar **de** × fiel **a**.\n“Gosto **do** meu time e sou fiel **a ele**.”',
+  },
+  {
+    id: 'rn-f-27',
+    topicId,
+    skillId: 'rn-paralelismo',
+    front: 'Como adequar à norma-padrão: “Conheço e confio neste método”?',
+    back: 'Conhecer pede objeto direto; confiar, **em**.\n“Conheço este método e confio **nele**.”',
+  },
+  {
+    id: 'rn-f-28',
+    topicId,
+    skillId: 'rn-paralelismo',
+    front: 'Qual o macete para o paralelismo de regência?',
+    back: 'Teste **cada termo sozinho** com o complemento.\nSe um deles não funciona com aquela preposição, dê a cada termo a sua e retome o complemento com pronome: “**dele**”, “**nele**”, “**a ele**”.',
+  },
+  {
+    id: 'rn-f-29',
+    topicId,
+    skillId: 'rn-paralelismo',
+    front: 'Como costumam cobrar o paralelismo de regência em prova?',
+    back: 'Frases com dois termos (nome + nome, verbo + nome) e um só complemento, para julgar a correção — ou reescritas para escolher.\nA forma correta dá a cada termo a sua preposição e retoma o complemento com pronome.',
+  },
+];

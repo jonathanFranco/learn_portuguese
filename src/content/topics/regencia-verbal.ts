@@ -1,0 +1,677 @@
+import type { Flashcard, Lesson, Question } from '../../domain/types';
+
+const topicId = 'regencia-verbal';
+
+export const lessons: Lesson[] = [
+  {
+    id: 'rv-l-conceito',
+    topicId,
+    skillId: 'rv-conceito',
+    title: 'O verbo pede preposição?',
+    summary:
+      '**Regência verbal** é a relação entre o verbo (**termo regente**) e o seu complemento (**termo regido**). Uns verbos se ligam ao complemento sem preposição (**VTD**), outros exigem preposição (**VTI**), e outros pedem os dois complementos (**VTDI**).',
+    examples: [
+      {
+        sentence: 'Os candidatos conhecem o edital.',
+        breakdown: ['Quem conhece, conhece **algo** → sem preposição', '“Conhecer” é **VTD**; “o edital” é objeto direto', 'Com pronome: “conhecem-**no**”'],
+      },
+      {
+        sentence: 'Os candidatos gostam do edital.',
+        breakdown: ['Quem gosta, gosta **de** algo → preposição obrigatória', '“Gostar” é **VTI**; “do edital” (de + o) é objeto indireto', 'Sentido parecido, regência diferente: “apreciam **o** edital”'],
+      },
+      {
+        sentence: 'O fiscal entregou a prova ao candidato.',
+        breakdown: ['Entregar **algo a alguém** → **VTDI**', '“a prova” = objeto direto; “ao candidato” = objeto indireto', 'Com pronome: “entregou-**lhe** a prova”'],
+      },
+    ],
+    deepDive:
+      'Como testar: monte a frase “quem [verbo], [verbo]…” e veja o que cabe naturalmente.\n“Quem confia, confia **em** alguém” (VTI) · “Quem respeita, respeita **alguém**” (VTD) · “Quem informa, informa **algo a alguém**” (VTDI).\n\nTeste do pronome: complemento que vira **o/a** é objeto direto (“Respeito-**o**”); complemento de pessoa que vira **lhe** é objeto indireto com “a” (“Obedeço-**lhe**”).\n\nTeste da passiva: em regra, só VTD forma voz passiva (“O edital **foi lido**”). Exceções tradicionais: **obedecer**, **desobedecer** e **responder**.\n\nVerbos como **morar**, **residir** e **situar-se** pedem “em”: “Moro **em** Natal”. A análise tradicional chama esse termo de adjunto adverbial de lugar (há quem fale em complemento adverbial); para a regência, o que importa é a preposição.',
+    tips: [
+      {
+        kind: 'cobranca',
+        text: 'Formato muito comum: **reescrita com troca de verbo**. O item substitui um verbo por um sinônimo e pergunta se a correção gramatical se mantém. “Os fiscais **respeitam as** normas” → “Os fiscais **obedecem às** normas” ✓; “Os fiscais **obedecem as** normas” ✗. Mudou o verbo, confira se a preposição tem de entrar ou sair.',
+      },
+      {
+        kind: 'cobranca',
+        text: 'Em múltipla escolha, é comum pedir a frase em que **dois verbos de regências diferentes** dividem o mesmo complemento: “Li e gostei do livro”. Na norma-padrão, cada verbo recebe o complemento que pede: “Li o livro e gostei **dele**”.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado: verbos de **sentido parecido** podem ter **regência diferente**. “Gostar **de**” × “apreciar” (sem preposição); “obedecer **a**” × “respeitar”; “assistir **a**” (= ver) × “ver”. Sinônimo não garante a mesma preposição.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado: nem toda preposição depois do verbo é exigida por ele. Em “Amo **a** Deus”, o “a” é enfático (objeto direto preposicionado: “amo alguém”). Pergunte sempre se a preposição é **necessária** para completar o sentido do verbo.',
+      },
+      {
+        kind: 'macete',
+        text: 'Monte a frase-teste com **algo / alguém**: “quem confia, confia **em** alguém” → VTI. Depois confirme com pronome: virou **o/a**? VTD. Virou **lhe** ou **a ele**? VTI com “a”.',
+      },
+    ],
+  },
+  {
+    id: 'rv-l-sentido',
+    topicId,
+    skillId: 'rv-sentido',
+    title: 'Mudou o sentido, mudou a regência',
+    summary:
+      'Alguns verbos mudam de regência conforme o **sentido**: **assistir**, **aspirar**, **visar**, **querer**, **proceder** e **implicar**. Descubra o sentido no contexto antes de decidir pela preposição.',
+    examples: [
+      {
+        sentence: 'Assistimos ao debate. / O médico assistiu o paciente.',
+        breakdown: [
+          'Assistir = **ver, presenciar** → pede “a”: assistir **ao** debate',
+          'Assistir = **ajudar, dar assistência** → sem preposição na regência mais aceita: assistiu **o** paciente',
+          'Há gramáticos que também aceitam “assistiu **ao** paciente” nesse sentido',
+        ],
+      },
+      {
+        sentence: 'Aspirou o ar puro. / Aspira ao cargo de auditor.',
+        breakdown: ['Aspirar = **respirar, sorver** → sem preposição', 'Aspirar = **desejar, almejar** → pede “a”: aspira **ao** cargo', 'Com pronome: “aspira **a ele**” (não “aspira-lhe”)'],
+      },
+      {
+        sentence: 'A medida implica gastos.',
+        breakdown: [
+          'Implicar = **acarretar** → sem preposição na norma-padrão tradicional',
+          '“Implica **em** gastos” é muito usado e já aparece em dicionários, mas a forma tradicional é sem preposição',
+          'Implicar = **antipatizar, provocar** → “implica **com** todos”',
+        ],
+      },
+    ],
+    deepDive:
+      '**Assistir**\n• ver, presenciar → **a**: “assistir **ao** jogo” (pronome: “assistir **a ele**”, não “assistir-lhe”)\n• ajudar, socorrer → sem preposição (“assistir **o** doente”); há quem aceite “**ao** doente”\n• caber, ser direito de → **a**: “O direito **assiste ao** réu” / “Assiste-**lhe** o direito”\n• morar (uso literário) → **em**: “Assiste **em** Lisboa”\n\n**Aspirar**: respirar → sem preposição; desejar → **a**.\n\n**Visar**\n• mirar; pôr visto → sem preposição: “visou **o** alvo”, “visou **o** passaporte”\n• pretender, ter como objetivo → a tradição pede **a** (“visa **ao** bem comum”), mas muitos gramáticos aceitam sem preposição, sobretudo antes de infinitivo (“visa **melhorar** o serviço”)\n\n**Querer**: desejar → sem preposição (“quero **o** cargo”); estimar, ter afeto → **a** (“quero muito **aos** meus pais”, “quero-**lhe** bem”).\n\n**Proceder**\n• ter fundamento → sem complemento: “A reclamação não **procede**”\n• vir de, originar-se → **de**: “O voo **procede de** Manaus”\n• dar início, realizar → **a**: “O juiz **procedeu à** leitura da sentença”\n\n**Implicar**\n• acarretar → sem preposição: “implica **riscos**”\n• antipatizar, provocar → **com**: “implica **com** o colega”\n• envolver, comprometer → alguém **em** algo: “implicaram o gerente **no** esquema”',
+    tips: [
+      {
+        kind: 'cobranca',
+        text: 'Questões de lacuna e de “assinale a frase correta” colocam o mesmo verbo em sentidos diferentes: “aspirou ___ perfume” × “aspira ___ cargo”. Em certo/errado, é comum afirmar que retirar o acento de “procedeu **à** leitura” ou de “aspira **à** vaga” manteria a correção — falso: nesses sentidos, o verbo pede “a” e há crase.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado com **assistir = ver** e o pronome: “O filme? Assisti **a ele**”, não “assisti-**lhe**”. O mesmo vale para aspirar e visar (“aspiro **a ele**”). O uso seguro de “lhe” é com assistir = **caber**: “Assiste-**lhe** o direito de recorrer” (quem aceita assistir = ajudar com “a” aceita também “assistir-**lhe**” nesse sentido).',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado com os pontos controversos: **assistir = ajudar** com “a”, **visar = pretender** sem “a” e **implicar em** têm defesa em gramáticos e dicionários de peso. Não trate essas formas como erro absoluto. Os erros seguros são “assistir **o** filme” (= ver) e “aspirar **o** cargo” (= desejar).',
+      },
+      {
+        kind: 'macete',
+        text: 'Troque por um sinônimo: se couber **ver**, **desejar** ou **realizar** (proceder), o verbo pede “a” (assistir **a**, aspirar **a**, proceder **a**). Se couber **ajudar** (na regência mais aceita), **respirar** ou **mirar/carimbar** (visar), fica sem preposição.',
+      },
+    ],
+  },
+  {
+    id: 'rv-l-classicos',
+    topicId,
+    skillId: 'rv-classicos',
+    title: 'Os verbos que mais caem',
+    summary:
+      'Na norma-padrão: **obedecer a**, **preferir algo a algo**, **chegar a** / **ir a**, **esquecer algo** ou **esquecer-se de algo**, **simpatizar com**, **namorar alguém** e **pagar/perdoar algo a alguém**.',
+    examples: [
+      {
+        sentence: 'Prefiro estudar a sair.',
+        breakdown: ['Preferir **algo a algo** → a segunda opção vem com “a”', 'Errado: “Prefiro **mais** estudar **do que** sair”', '“Preferir” já contém a ideia de “querer mais”'],
+      },
+      {
+        sentence: 'Cheguei ao trabalho cedo.',
+        breakdown: ['Chegar e ir (movimento) pedem “a” na norma-padrão', '“Cheguei **no** trabalho” é comum na fala, mas a prova cobra “**ao** trabalho”'],
+      },
+      {
+        sentence: 'Esqueci o prazo. / Esqueci-me do prazo.',
+        breakdown: ['Sem pronome → sem preposição: esqueci **o** prazo', 'Com pronome → com “de”: esqueci-**me do** prazo', 'A mistura é que a norma-padrão tradicional condena: “Esqueci **do** prazo”'],
+      },
+    ],
+    deepDive:
+      '**Obedecer / desobedecer** → **a**: “obedecer **às** normas”, “obedeço-**lhe**”. Admitem voz passiva: “As normas **são obedecidas**”.\n\n**Lembrar** segue o par de esquecer: “Lembrei **o** compromisso” / “Lembrei-**me do** compromisso”. Há ainda a construção clássica em que a coisa esquecida é o sujeito: “**Esqueceu-me** o nome” (= o nome me fugiu da memória).\n\n**Simpatizar / antipatizar** → **com**, e **não** são pronominais: “Simpatizei **com** ela” (não “simpatizei-**me**”).\n\n**Namorar** → na gramática tradicional, sem preposição: “Ela namora **o** vizinho”. “Namorar **com**” é condenado por muitos gramáticos, mas é registrado em dicionários e há dicionário de regência que o considera normal; em prova, a forma segura é a sem preposição.\n\n**Pagar / perdoar** → coisa sem preposição, pessoa com “a”: “Paguei **a conta ao** eletricista”; “Perdoou **a dívida ao** amigo”. Com pessoa, a forma tradicional é “perdoou-**lhe**”; há gramáticos que já aceitam objeto direto (“perdoou-**o**”).\n\n**Chegar / ir** → “a” indica o destino: “Fui **ao** banco”. “Ir **para**” também é correto e sugere permanência (“Foi **para** Recife e lá ficou”). Alguns dicionários de regência registram “chegar **em**” como uso brasileiro, mas a forma cobrada pela norma-padrão é “chegar **a**”.',
+    tips: [
+      {
+        kind: 'cobranca',
+        text: 'Formato clássico de “assinale a frase de acordo com a norma-padrão”: as alternativas erradas trazem “**prefiro mais** X **do que** Y”, “**obedecer o** regulamento”, “**chegar no** local”, “**esqueci do** nome”, “**simpatizo-me** com”. Em certo/errado, aparece como reescrita: “a substituição de ‘chegaram **ao**’ por ‘chegaram **no**’ manteria a correção” → errado.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado com **preferir**: o erro não é só o “do que”. “Prefiro **mais**…” e “prefiro **antes**…” também são condenados, porque preferir já significa “querer mais”. Forma correta: “Prefiro o cinema **ao** teatro”, “Prefiro isto **àquilo**” (a + aquilo).',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado com **esquecer/lembrar**: pronome e preposição andam juntos. “Esqueci **o** nome” ✓, “Esqueci-**me do** nome” ✓, “Esqueci **do** nome” ✗ na norma-padrão. A forma sem pronome com “de” é muito comum no Brasil e alguns dicionários a registram, sobretudo antes de infinitivo (“esqueci de avisar”), mas em prova a forma segura é o par completo.',
+      },
+      {
+        kind: 'macete',
+        text: 'Para verbos de movimento, troque o lugar por um **masculino**: “Fui **ao** banco” soa natural — prova que o verbo pede “a”. Então: “Fui **à** farmácia”, “Cheguei **à** reunião”, e não “**na** farmácia”, “**na** reunião”.',
+      },
+    ],
+  },
+  {
+    id: 'rv-l-relativo',
+    topicId,
+    skillId: 'rv-relativo',
+    title: 'A preposição vem antes do relativo',
+    summary:
+      'Se o verbo da oração do relativo pede preposição, ela vai **antes do pronome relativo**: “o cargo **a que** aspiro”, “o filme **a que** assisti”, “a cidade **em que** moro”.',
+    examples: [
+      {
+        sentence: 'Este é o cargo a que aspiro.',
+        breakdown: ['Desfaça: aspiro **ao** cargo → aspirar = desejar pede “a”', 'A preposição vai para antes do “que”: **a que** aspiro', 'Também: “**ao qual** aspiro”. Errado: “o cargo **que** aspiro”'],
+      },
+      {
+        sentence: 'A cidade em que moro é tranquila.',
+        breakdown: ['Desfaça: moro **na** cidade → pede “em”', '“**em que** moro” = “**na qual** moro” = “**onde** moro”', 'Errado: “A cidade **que** moro”'],
+      },
+      {
+        sentence: 'Este é o autor de cujo livro gosto.',
+        breakdown: ['Desfaça: gosto **do** livro do autor → “gostar” pede “de”', 'A preposição vem antes de **cujo**: “**de cujo** livro”', '“Cujo” não aceita artigo depois: “cujo **o** livro” é erro'],
+      },
+    ],
+    deepDive:
+      'Quem exige a preposição é o verbo **da oração do relativo**, não o verbo principal. Em “O filme **a que** assisti foi premiado”, quem pede “a” é “assisti”, não “foi premiado”.\n\n**O qual / a qual** pode receber crase: “A norma **à qual** obedeço” (obedeço **à** norma).\n\n**Quem** com antecedente se refere a pessoa e vem com preposição: “A colega **a quem** me referi”, “o amigo **com quem** simpatizo”.\n\n**Cujo** indica posse, concorda com a coisa possuída e não admite artigo depois: “O candidato **cujas** notas foram divulgadas”. Se o verbo pede preposição, ela vem antes: “O professor **a cujas** aulas assisti”.\n\n**Onde** × **aonde**: “onde” é para lugar com verbo de permanência (“a cidade **onde** moro”); “aonde” = **a + onde**, com verbo de movimento que pede “a” (“a cidade **aonde** vou”).',
+    tips: [
+      {
+        kind: 'cobranca',
+        text: 'Formato comum: achar a frase com **preposição faltando** antes do relativo (“o filme **que** assisti”, “a empresa **que** trabalho”, “as regras **que** devemos obedecer”). Em certo/errado, aparecem reescritas trocando “em que” por “onde” ou “a que” por “ao qual” — confira se a preposição sobreviveu à troca.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado com **cujo**: nunca “cujo **o**”, “cuja **a**”. E a preposição exigida pelo verbo vem **antes** dele: “O autor **de cuja** obra falei” (falei **da** obra), não “O autor cuja obra falei”.',
+      },
+      {
+        kind: 'pegadinha',
+        text: 'Cuidado: “onde” é para **lugar**. “A reunião **onde** se decidiu…” costuma ser condenado pela norma-padrão; prefira “**em que**” ou “**na qual**”. E não troque “onde” por “aonde” com verbo de permanência: “a casa **aonde** moro” é erro.',
+      },
+      {
+        kind: 'macete',
+        text: 'Desfaça a oração: troque o relativo pelo **antecedente** e monte a ordem direta. “O filme ___ assisti” → “assisti **ao filme**” → a preposição que apareceu vai para antes do “que”: “**a que** assisti”.',
+      },
+    ],
+  },
+];
+
+export const questions: Question[] = [
+  // ── O verbo pede preposição? ──
+  {
+    id: 'rv-01',
+    topicId,
+    skillId: 'rv-conceito',
+    difficulty: 1,
+    type: 'fill_blank',
+    statement: 'Complete de acordo com a norma-padrão:',
+    template: 'Todos os participantes gostaram ___ palestra.',
+    options: ['a', 'da', 'na'],
+    correct: 'da',
+    explanation: 'Quem gosta, gosta **de** algo (VTI): de + a palestra = **da** palestra.',
+  },
+  {
+    id: 'rv-02',
+    topicId,
+    skillId: 'rv-conceito',
+    difficulty: 1,
+    type: 'true_false',
+    statement: 'Em “Os alunos respeitam o regulamento.”, o verbo “respeitar” é transitivo direto, pois se liga ao complemento sem preposição.',
+    correct: true,
+    explanation: 'Quem respeita, respeita **algo/alguém**: VTD. Com pronome: “respeitam-**no**”.',
+  },
+  {
+    id: 'rv-03',
+    topicId,
+    skillId: 'rv-conceito',
+    difficulty: 2,
+    type: 'multiple_choice',
+    statement: 'Assinale a alternativa em que o verbo é **transitivo indireto**.',
+    alternatives: [
+      { id: 'A', text: 'O fiscal leu o edital com atenção.', whyWrong: 'Quem lê, lê **algo**: VTD.' },
+      { id: 'B', text: 'A equipe precisa de mais tempo.' },
+      { id: 'C', text: 'O diretor entregou o relatório ao secretário.', whyWrong: 'Entregar **algo a alguém**: VTDI (objeto direto e indireto).' },
+      { id: 'D', text: 'Os candidatos chegaram cedo.', whyWrong: '“Chegar” aqui não tem complemento: é intransitivo, e “cedo” é adjunto adverbial.' },
+      { id: 'E', text: 'Ela comprou um livro novo.', whyWrong: 'Quem compra, compra **algo**: VTD.' },
+    ],
+    correct: 'B',
+    explanation: 'Quem precisa, precisa **de** algo: a preposição é exigida pelo verbo, e “de mais tempo” é objeto indireto.',
+  },
+  {
+    id: 'rv-04',
+    topicId,
+    skillId: 'rv-conceito',
+    difficulty: 2,
+    type: 'identify_error',
+    statement: 'Toque no trecho com **erro de regência**.',
+    segments: ['Desde o primeiro dia,', 'os usuários', 'gostaram o novo sistema', 'de atendimento.'],
+    correct: 2,
+    explanation: '“Gostar” pede “de”: “gostaram **do** novo sistema”. Sem preposição, só com um verbo VTD: “aprovaram **o** novo sistema”.',
+  },
+  {
+    id: 'rv-05',
+    topicId,
+    skillId: 'rv-conceito',
+    difficulty: 3,
+    type: 'multiple_choice',
+    statement: 'Assinale a alternativa em que os verbos coordenados compartilham o mesmo complemento **de acordo com a norma-padrão**.',
+    alternatives: [
+      { id: 'A', text: 'Li e gostei do relatório.', whyWrong: '“Ler” é VTD (ler **o** relatório) e “gostar” pede “de”. Correto: “Li o relatório e gostei **dele**”.' },
+      { id: 'B', text: 'Os eleitores conhecem e confiam no candidato.', whyWrong: '“Conhecer” é VTD e “confiar” pede “em”. Correto: “conhecem o candidato e confiam **nele**”.' },
+      { id: 'C', text: 'Os moradores aceitaram e concordaram com a proposta.', whyWrong: '“Aceitar” é VTD (aceitar **a** proposta) e “concordar” pede “com”. Correto: “aceitaram a proposta e concordaram **com ela**”.' },
+      { id: 'D', text: 'O gerente analisou e aprovou o projeto.' },
+      { id: 'E', text: 'Os alunos assistiram e comentaram o filme.', whyWrong: '“Assistir” (= ver) pede “a”; “comentar” é VTD. Correto: “assistiram **ao** filme e **o** comentaram”.' },
+    ],
+    correct: 'D',
+    explanation: '“Analisar” e “aprovar” são ambos **VTD** (analisar algo, aprovar algo), então podem dividir o complemento “o projeto”. Nas outras, os verbos têm regências diferentes, e cada um precisa do seu complemento.',
+  },
+
+  // ── Verbos que mudam de sentido ──
+  {
+    id: 'rv-06',
+    topicId,
+    skillId: 'rv-sentido',
+    difficulty: 1,
+    type: 'fill_blank',
+    statement: 'Complete de acordo com a norma-padrão:',
+    template: 'Desde jovem, ela aspira ___ cargo de juíza.',
+    options: ['o', 'ao'],
+    correct: 'ao',
+    explanation: 'Aspirar = **desejar** pede “a”: a + o cargo = **ao** cargo. Sem preposição, só no sentido de respirar (“aspirou **o** ar”).',
+  },
+  {
+    id: 'rv-07',
+    topicId,
+    skillId: 'rv-sentido',
+    difficulty: 2,
+    type: 'true_false',
+    statement: 'Em “O médico assistiu o paciente durante a madrugada.”, há erro de regência, pois o verbo “assistir” sempre exige a preposição “a”.',
+    correct: false,
+    explanation: 'Aqui assistir = **ajudar, dar assistência**, sentido em que a regência mais aceita é sem preposição (“assistiu **o** paciente”); há gramáticos que também aceitam “**ao** paciente”. Só no sentido de **ver** a preposição é exigida (“assistiu **ao** jogo”).',
+  },
+  {
+    id: 'rv-08',
+    topicId,
+    skillId: 'rv-sentido',
+    difficulty: 2,
+    type: 'multiple_choice',
+    statement: 'Assinale a frase em que a regência verbal segue a norma-padrão.',
+    alternatives: [
+      { id: 'A', text: 'Ainda não assisti o novo filme do diretor.', whyWrong: 'Assistir = **ver** pede “a”: “assisti **ao** novo filme”.' },
+      { id: 'B', text: 'O candidato aspira uma vaga no tribunal.', whyWrong: 'Aspirar = **desejar** pede “a”: “aspira **a** uma vaga”.' },
+      { id: 'C', text: 'O delegado procedeu à abertura do inquérito.' },
+      { id: 'D', text: 'O espetáculo? Assisti-lhe ontem.', whyWrong: 'Assistir = ver não aceita “lhe”: “Assisti **a ele** ontem”.' },
+      { id: 'E', text: 'O mecânico aspirou ao cheiro de combustível.', whyWrong: 'Aspirar = **respirar, sorver** dispensa preposição: “aspirou **o** cheiro”.' },
+    ],
+    correct: 'C',
+    explanation: 'Proceder = **dar início, realizar** pede “a”: a + a abertura = **à** abertura.',
+  },
+  {
+    id: 'rv-09',
+    topicId,
+    skillId: 'rv-sentido',
+    difficulty: 3,
+    type: 'multiple_choice',
+    statement: 'Sobre a regência do verbo “visar”, assinale a afirmação **correta**.',
+    alternatives: [
+      { id: 'A', text: '“O atirador visou ao alvo” segue a norma-padrão, pois “visar” sempre exige “a”.', whyWrong: 'Visar = **mirar** é transitivo direto (“visou **o** alvo”); e “sempre” é falso: em vários sentidos o verbo dispensa “a”.' },
+      { id: 'B', text: '“O gerente visou o cheque” está errado, pois “visar” exige preposição.', whyWrong: 'Visar = **pôr visto** é transitivo direto: “visou **o** cheque” está correto.' },
+      { id: 'C', text: 'No sentido de “pretender”, a tradição pede “a” (“visa ao lucro”), mas muitos gramáticos aceitam a construção sem preposição, sobretudo antes de infinitivo.' },
+      { id: 'D', text: 'No sentido de “pretender”, “visar” é intransitivo e não admite complemento.', whyWrong: 'Quem visa, visa **a algo**: o verbo precisa de complemento.' },
+      { id: 'E', text: '“O projeto visa a melhorar o atendimento” está errado, pois não se usa preposição antes de infinitivo.', whyWrong: 'Com “a” é justamente a forma tradicional; sem “a” também é aceita. Nenhuma das duas é erro.' },
+    ],
+    correct: 'C',
+    explanation: 'Visar = mirar ou pôr visto → **sem** preposição. Visar = pretender → a tradição pede “**a**”, mas a forma sem preposição é amplamente aceita, sobretudo antes de infinitivo (“visa melhorar”). Por isso, cuidado com alternativas que tratam uma das formas como erro absoluto.',
+  },
+  {
+    id: 'rv-10',
+    topicId,
+    skillId: 'rv-sentido',
+    difficulty: 2,
+    type: 'identify_error',
+    statement: 'Toque no trecho com **erro de regência** (incluindo o acento indicativo de crase).',
+    segments: ['Após o intervalo,', 'a comissão', 'procedeu a contagem', 'dos votos.'],
+    correct: 2,
+    explanation: 'Proceder = **realizar, dar início** pede “a”: a + a contagem = “procedeu **à** contagem”. Teste com masculino: “procedeu **ao** cálculo”.',
+  },
+
+  // ── Verbos clássicos ──
+  {
+    id: 'rv-11',
+    topicId,
+    skillId: 'rv-classicos',
+    difficulty: 1,
+    type: 'fill_blank',
+    statement: 'Complete de acordo com a norma-padrão:',
+    template: 'Todos os servidores devem obedecer ___ normas de segurança.',
+    options: ['as', 'às'],
+    correct: 'às',
+    explanation: 'Obedecer pede “a” (obedecer **a** algo) + as normas = **às** normas. Teste: “obedecer **aos** regulamentos”.',
+  },
+  {
+    id: 'rv-12',
+    topicId,
+    skillId: 'rv-classicos',
+    difficulty: 1,
+    type: 'true_false',
+    statement: 'A frase “Prefiro mais estudar em casa do que na biblioteca.” está de acordo com a norma-padrão.',
+    correct: false,
+    explanation: 'Preferir é **algo a algo**, sem “mais” e sem “do que”: “Prefiro estudar em casa **a** estudar na biblioteca”.',
+  },
+  {
+    id: 'rv-13',
+    topicId,
+    skillId: 'rv-classicos',
+    difficulty: 2,
+    type: 'multiple_choice',
+    statement: 'Assinale a frase de acordo com a norma-padrão quanto à regência verbal.',
+    alternatives: [
+      { id: 'A', text: 'Os candidatos chegaram no local da prova às 7h.', whyWrong: 'Chegar (movimento) pede “a”: “chegaram **ao** local”.' },
+      { id: 'B', text: 'Esqueci-me o horário da reunião.', whyWrong: 'Com pronome, o verbo pede “de”: “Esqueci-**me do** horário” (ou, sem pronome, “Esqueci **o** horário”).' },
+      { id: 'C', text: 'Simpatizei-me com a nova coordenadora.', whyWrong: 'Simpatizar não é pronominal: “Simpatizei **com** a nova coordenadora”.' },
+      { id: 'D', text: 'Prefiro trabalhar de manhã a trabalhar à noite.' },
+      { id: 'E', text: 'O motorista desobedeceu o sinal vermelho.', whyWrong: 'Desobedecer pede “a”: “desobedeceu **ao** sinal vermelho”.' },
+    ],
+    correct: 'D',
+    explanation: 'Preferir **algo a algo**: “Prefiro trabalhar de manhã **a** trabalhar à noite” — sem “mais” e sem “do que”.',
+  },
+  {
+    id: 'rv-14',
+    topicId,
+    skillId: 'rv-classicos',
+    difficulty: 2,
+    type: 'identify_error',
+    statement: 'Toque no trecho com **erro de regência** segundo a norma-padrão.',
+    segments: ['Quando chegamos', 'no aeroporto,', 'o voo', 'já tinha partido.'],
+    correct: 1,
+    explanation: 'Na norma-padrão, chegar pede “a” para indicar destino: “Quando chegamos **ao** aeroporto”. “Chegar em” é comum na fala, mas não é a forma cobrada em prova.',
+  },
+  {
+    id: 'rv-15',
+    topicId,
+    skillId: 'rv-classicos',
+    difficulty: 3,
+    type: 'multiple_choice',
+    statement: 'Assinale a alternativa em que **as duas** construções seguem a norma-padrão.',
+    alternatives: [
+      { id: 'A', text: 'Esqueci o documento. / Esqueci-me o documento.', whyWrong: 'A segunda usa o pronome sem a preposição: “Esqueci-**me do** documento”.' },
+      { id: 'B', text: 'Lembrei-me o compromisso. / Lembrei o compromisso.', whyWrong: 'A primeira usa o pronome sem a preposição: “Lembrei-**me do** compromisso”.' },
+      { id: 'C', text: 'Esqueci-me da senha. / Esqueceu-me a senha.' },
+      { id: 'D', text: 'Prefiro café a chá. / Prefiro antes café do que chá.', whyWrong: 'A segunda usa “antes” e “do que”: preferir já significa “querer mais” e pede “a” (“Prefiro café **a** chá”).' },
+      { id: 'E', text: 'Simpatizo com ela. / Simpatizo-me com ela.', whyWrong: 'Simpatizar não é pronominal: “simpatizo-**me**” está errado.' },
+    ],
+    correct: 'C',
+    explanation: '“Esqueci-**me da** senha” é o par pronome + preposição. “**Esqueceu-me** a senha” é a construção clássica em que a coisa esquecida é o **sujeito** (= a senha fugiu-me da memória) e “me” é objeto indireto — também correta.',
+  },
+
+  // ── Regência com pronome relativo ──
+  {
+    id: 'rv-16',
+    topicId,
+    skillId: 'rv-relativo',
+    difficulty: 1,
+    type: 'fill_blank',
+    statement: 'Complete de acordo com a norma-padrão:',
+    template: 'O documentário ___ assistimos ontem foi premiado.',
+    options: ['que', 'a que', 'de que'],
+    correct: 'a que',
+    explanation: 'Desfaça: assistimos **ao** documentário (assistir = ver pede “a”). A preposição vai para antes do relativo: “**a que** assistimos” (ou “**ao qual** assistimos”).',
+  },
+  {
+    id: 'rv-17',
+    topicId,
+    skillId: 'rv-relativo',
+    difficulty: 2,
+    type: 'multiple_choice',
+    statement: 'Assinale a frase em que o pronome relativo está empregado de acordo com a norma-padrão.',
+    alternatives: [
+      { id: 'A', text: 'A empresa que trabalho fica no centro.', whyWrong: 'Trabalho **na** empresa → “a empresa **em que** (na qual, onde) trabalho”.' },
+      { id: 'B', text: 'Este é o cargo a que todos aspiram.' },
+      { id: 'C', text: 'As regras que devemos obedecer estão no edital.', whyWrong: 'Obedecemos **às** regras → “as regras **a que** (às quais) devemos obedecer”.' },
+      { id: 'D', text: 'O professor cujo o livro li vem amanhã.', whyWrong: '“Cujo” não admite artigo depois: “o professor **cujo** livro li”.' },
+      { id: 'E', text: 'O assunto que mais gosto é regência.', whyWrong: 'Gosto **do** assunto → “o assunto **de que** mais gosto”.' },
+    ],
+    correct: 'B',
+    explanation: 'Aspirar = desejar pede “a”: todos aspiram **ao** cargo → “o cargo **a que** todos aspiram”.',
+  },
+  {
+    id: 'rv-18',
+    topicId,
+    skillId: 'rv-relativo',
+    difficulty: 2,
+    type: 'true_false',
+    statement: 'Em “A cidade onde nasci fica no interior.”, o relativo “onde” poderia ser substituído por “em que” sem prejuízo da correção.',
+    correct: true,
+    explanation: 'Nasci **na** cidade: “onde” = “**em que**” = “**na qual**”. As três formas estão corretas porque o antecedente é um lugar.',
+  },
+  {
+    id: 'rv-19',
+    topicId,
+    skillId: 'rv-relativo',
+    difficulty: 2,
+    type: 'identify_error',
+    statement: 'Toque no trecho com **erro** no emprego do pronome relativo.',
+    segments: ['Este é o escritor', 'cuja a obra', 'foi adaptada', 'para o cinema.'],
+    correct: 1,
+    explanation: '“Cujo/cuja” não admite artigo depois: “o escritor **cuja** obra foi adaptada”.',
+  },
+  {
+    id: 'rv-20',
+    topicId,
+    skillId: 'rv-relativo',
+    difficulty: 3,
+    type: 'multiple_choice',
+    statement: 'Assinale a alternativa que completa corretamente a frase: “Aquele é o pesquisador ___ estudos me referi na palestra.”',
+    alternatives: [
+      { id: 'A', text: 'cujos', whyWrong: 'Falta a preposição exigida por “referir-se”: refiro-me **aos** estudos dele.' },
+      { id: 'B', text: 'a cujos' },
+      { id: 'C', text: 'cujos os', whyWrong: '“Cujo” não admite artigo depois, e ainda falta a preposição.' },
+      { id: 'D', text: 'aos cujos', whyWrong: '“Cujo” não admite artigo antes; a preposição vem sozinha: “a cujos”.' },
+      { id: 'E', text: 'de cujos', whyWrong: '“Referir-se” pede “a”, não “de”: refiro-me **a** algo.' },
+    ],
+    correct: 'B',
+    explanation: 'Desfaça: “Referi-me **aos** estudos do pesquisador”. “Referir-se” pede “a”, que vem antes de “cujos”: “o pesquisador **a cujos** estudos me referi”. “Cujos” concorda com “estudos”.',
+  },
+];
+
+export const flashcards: Flashcard[] = [
+  // ── O verbo pede preposição? ──
+  {
+    id: 'rv-f-01',
+    topicId,
+    skillId: 'rv-conceito',
+    front: 'O que é regência verbal?',
+    back: 'A relação entre o verbo (**termo regente**) e o seu complemento (**termo regido**).\nA pergunta-chave: o verbo exige preposição? Qual?',
+  },
+  {
+    id: 'rv-f-02',
+    topicId,
+    skillId: 'rv-conceito',
+    front: 'Qual o teste rápido para saber se o verbo é VTD ou VTI?',
+    back: 'Monte “quem [verbo], [verbo]…”:\n“Quem respeita, respeita **alguém**” → VTD.\n“Quem confia, confia **em** alguém” → VTI.\nConfirme com pronome: **o/a** = objeto direto; **lhe** = objeto indireto.',
+  },
+  {
+    id: 'rv-f-03',
+    topicId,
+    skillId: 'rv-conceito',
+    front: 'Certo ou errado? _Conheço e confio nos meus colegas._',
+    back: '**Errado** na norma-padrão. “Conhecer” é VTD e “confiar” pede “em”: os verbos não podem dividir o mesmo complemento.\nCorreto: “Conheço os meus colegas e confio **neles**”.',
+  },
+  {
+    id: 'rv-f-04',
+    topicId,
+    skillId: 'rv-conceito',
+    front: 'Certo ou errado? _Os fiscais respeitam às normas._',
+    back: '**Errado.** “Respeitar” é VTD: “respeitam **as** normas”.\nCom “obedecer”, sim: “obedecem **às** normas”.',
+  },
+  {
+    id: 'rv-f-05',
+    topicId,
+    skillId: 'rv-conceito',
+    front: 'Complete: Os moradores precisam ___ apoio da prefeitura.',
+    back: '**do** — quem precisa, precisa **de** algo (VTI).\nde + o apoio = **do** apoio.',
+  },
+  {
+    id: 'rv-f-06',
+    topicId,
+    skillId: 'rv-conceito',
+    front: 'Quais verbos, mesmo pedindo preposição, admitem voz passiva?',
+    back: '**Obedecer**, **desobedecer** e **responder** (exceções tradicionais).\n“As normas **são obedecidas**.” Em regra, só VTD forma passiva.',
+  },
+  {
+    id: 'rv-f-07',
+    topicId,
+    skillId: 'rv-conceito',
+    front: 'Como costumam cobrar o conceito de regência em prova?',
+    back: 'Em **reescritas**: troca-se o verbo por um sinônimo de outra regência (“respeitar **as** normas” → “obedecer **às** normas”) e pergunta-se se a correção se mantém.\nTambém em frases com dois verbos dividindo o mesmo complemento.',
+  },
+
+  // ── Verbos que mudam de sentido ──
+  {
+    id: 'rv-f-08',
+    topicId,
+    skillId: 'rv-sentido',
+    front: 'Assistir: quando pede “a”?',
+    back: '**Ver, presenciar** → “assistir **ao** jogo”.\n**Caber, ser direito de** → “O direito **assiste ao** réu”.\n**Ajudar** → sem preposição na regência mais aceita (“assistir **o** doente”); há gramáticos que aceitam “**ao** doente”.',
+  },
+  {
+    id: 'rv-f-09',
+    topicId,
+    skillId: 'rv-sentido',
+    front: 'Certo ou errado? _A atleta aspira uma medalha olímpica._',
+    back: '**Errado.** Aspirar = **desejar** pede “a”: “aspira **a** uma medalha”.\nAspirar = **respirar** é que dispensa: “aspirou **o** ar puro”.',
+  },
+  {
+    id: 'rv-f-10',
+    topicId,
+    skillId: 'rv-sentido',
+    front: 'Certo ou errado? _O jogo? Assisti-lhe pela televisão._',
+    back: '**Errado.** Assistir = ver não aceita “lhe”: “Assisti **a ele**”.\nO uso seguro de “lhe” é com assistir = caber: “Assiste-**lhe** o direito de recorrer”.',
+  },
+  {
+    id: 'rv-f-11',
+    topicId,
+    skillId: 'rv-sentido',
+    front: 'Visar: com ou sem preposição?',
+    back: '**Mirar** ou **pôr visto** → sem: “visou **o** alvo”, “visou **o** passaporte”.\n**Pretender** → a tradição pede “a” (“visa **ao** lucro”); muitos gramáticos aceitam sem, sobretudo antes de infinitivo (“visa **melhorar**”).',
+  },
+  {
+    id: 'rv-f-12',
+    topicId,
+    skillId: 'rv-sentido',
+    front: 'Complete: O cartório procedeu ___ análise dos documentos.',
+    back: '**à** — proceder = **realizar, dar início** pede “a” + a análise = **à**.\nOutros sentidos: “A queixa não **procede**” (ter fundamento); “O voo **procede de** Lisboa” (vir de).',
+  },
+  {
+    id: 'rv-f-13',
+    topicId,
+    skillId: 'rv-sentido',
+    front: 'Querer e implicar: o que muda com o sentido?',
+    back: '**Querer** = desejar → “quero **o** cargo”; = estimar → “quero-**lhe** bem”.\n**Implicar** = acarretar → “implica **riscos**”; = antipatizar → “implica **com** todos”.\n“Implica **em** riscos” é muito usado e já registrado em dicionários, mas a forma tradicional é sem preposição.',
+  },
+  {
+    id: 'rv-f-14',
+    topicId,
+    skillId: 'rv-sentido',
+    front: 'Como costumam cobrar os verbos que mudam de sentido em prova?',
+    back: 'Em lacunas e em “assinale a frase correta”, com o mesmo verbo em dois sentidos (“aspirou ___ perfume” × “aspira ___ cargo”).\nEm certo/errado, propondo retirar a crase de “procedeu **à** leitura” ou “aspira **à** vaga” — o que torna a frase errada.',
+  },
+
+  // ── Verbos clássicos ──
+  {
+    id: 'rv-f-15',
+    topicId,
+    skillId: 'rv-classicos',
+    front: 'Certo ou errado? _Prefiro mais o cinema do que o teatro._',
+    back: '**Errado.** Preferir = **algo a algo**, sem “mais” e sem “do que”.\nCorreto: “Prefiro o cinema **ao** teatro”.',
+  },
+  {
+    id: 'rv-f-16',
+    topicId,
+    skillId: 'rv-classicos',
+    front: 'Complete: Os motoristas devem obedecer ___ sinalização.',
+    back: '**à** — obedecer pede “a” + a sinalização = **à**.\nCom pronome: “obedecer-**lhe**”.',
+  },
+  {
+    id: 'rv-f-17',
+    topicId,
+    skillId: 'rv-classicos',
+    front: 'Certo ou errado? _Chegamos no escritório às 8h._',
+    back: '**Errado** na norma-padrão. Chegar (destino) pede “a”: “Chegamos **ao** escritório”.\n“Chegar em” é comum na fala, mas a prova cobra “chegar a”.',
+  },
+  {
+    id: 'rv-f-18',
+    topicId,
+    skillId: 'rv-classicos',
+    front: 'Esquecer e lembrar: quando entra o “de”?',
+    back: 'Só com o **pronome**:\n“Esqueci **o** prazo” / “Esqueci-**me do** prazo”.\n“Lembrei **o** endereço” / “Lembrei-**me do** endereço”.\n“Esqueci **do** prazo” (sem pronome, com “de”) é condenado pela norma-padrão tradicional; é muito usado no Brasil e já aparece em dicionário de regência, mas em prova a forma segura é o par completo.',
+  },
+  {
+    id: 'rv-f-19',
+    topicId,
+    skillId: 'rv-classicos',
+    front: 'Certo ou errado? _Simpatizei-me com a nova equipe._',
+    back: '**Errado.** Simpatizar (e antipatizar) pede “com”, mas **não é pronominal**.\nCorreto: “Simpatizei **com** a nova equipe”.',
+  },
+  {
+    id: 'rv-f-20',
+    topicId,
+    skillId: 'rv-classicos',
+    front: 'Pagar e perdoar: como fica o complemento?',
+    back: '**Coisa** sem preposição, **pessoa** com “a”:\n“Paguei **a conta ao** eletricista”; “Perdoou **a dívida ao** amigo”.\nCom pessoa, a forma tradicional é “perdoou-**lhe**”; há gramáticos que já aceitam “perdoou-**o**”.',
+  },
+  {
+    id: 'rv-f-21',
+    topicId,
+    skillId: 'rv-classicos',
+    front: 'Namorar: com ou sem preposição?',
+    back: 'Na gramática tradicional, **VTD**: “Ela namora **o** colega de turma”.\n“Namorar **com**” é condenado por muitos gramáticos, mas aparece em dicionários e tem defensores; em prova, a forma segura é sem preposição.',
+  },
+  {
+    id: 'rv-f-22',
+    topicId,
+    skillId: 'rv-classicos',
+    front: 'Como costumam cobrar os verbos clássicos de regência em prova?',
+    back: 'Em “assinale a frase de acordo com a norma-padrão”, as erradas trazem “prefiro **mais**… **do que**”, “obedecer **o** regulamento”, “chegar **no** local”, “esqueci **do** nome”.\nEm certo/errado, como reescrita: “a troca de ‘ao’ por ‘no’ manteria a correção” → errado.',
+  },
+
+  // ── Regência com pronome relativo ──
+  {
+    id: 'rv-f-23',
+    topicId,
+    skillId: 'rv-relativo',
+    front: 'Onde vai a preposição exigida pelo verbo da oração com pronome relativo?',
+    back: '**Antes do pronome relativo**.\n“Aspiro **ao** cargo” → “o cargo **a que** aspiro” / “**ao qual** aspiro”.',
+  },
+  {
+    id: 'rv-f-24',
+    topicId,
+    skillId: 'rv-relativo',
+    front: 'Certo ou errado? _A peça que assisti ontem foi elogiada._',
+    back: '**Errado.** Assistir = ver pede “a”: “A peça **a que** assisti” (ou “**à qual** assisti”).',
+  },
+  {
+    id: 'rv-f-25',
+    topicId,
+    skillId: 'rv-relativo',
+    front: 'Complete: O bairro ___ moro é tranquilo.',
+    back: '**em que** (ou **no qual**, **onde**) — quem mora, mora **em** algum lugar.\n“O bairro **que** moro” é erro.',
+  },
+  {
+    id: 'rv-f-26',
+    topicId,
+    skillId: 'rv-relativo',
+    front: 'Certo ou errado? _Esta é a empresa cujo o diretor foi premiado._',
+    back: '**Errado.** “Cujo” não admite artigo depois: “a empresa **cujo** diretor foi premiado”.\n“Cujo” concorda com a coisa possuída (diretor).',
+  },
+  {
+    id: 'rv-f-27',
+    topicId,
+    skillId: 'rv-relativo',
+    front: 'Qual o teste rápido para a preposição antes do relativo?',
+    back: 'Troque o relativo pelo **antecedente** e monte a ordem direta.\n“A lei ___ obedeço” → “obedeço **à** lei” → “a lei **a que** / **à qual** obedeço”.',
+  },
+  {
+    id: 'rv-f-28',
+    topicId,
+    skillId: 'rv-relativo',
+    front: 'Onde × aonde: qual a diferença?',
+    back: '**Onde** = lugar em que se está (permanência): “a cidade **onde** moro”.\n**Aonde** = a + onde, com verbo de movimento que pede “a”: “a cidade **aonde** vou”.\nNa norma-padrão, “onde” se usa para **lugar**.',
+  },
+  {
+    id: 'rv-f-29',
+    topicId,
+    skillId: 'rv-relativo',
+    front: 'Como costumam cobrar regência com pronome relativo em prova?',
+    back: 'Pedem a frase com preposição **faltando** antes do relativo (“a empresa **que** trabalho”, “as regras **que** obedeço”) ou com “cujo **o**”.\nEm certo/errado, trocam “em que” por “onde” ou “a que” por “ao qual” e perguntam se a correção se mantém.',
+  },
+];

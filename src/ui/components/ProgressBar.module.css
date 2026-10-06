@@ -1,0 +1,30 @@
+.track {
+  position: relative;
+  width: 100%;
+  background: var(--surface-sunken);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+.sm { height: 6px; }
+.md { height: 10px; }
+
+.fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width var(--dur-slow) var(--ease-out);
+}
+.brand { background: var(--brand); }
+.accent { background: var(--accent); }
+
+.tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+  background: var(--surface);
+  opacity: 0.8;
+}
+
+.fill { animation: fill-grow 900ms var(--ease-out) both; transform-origin: left; }
+@keyframes fill-grow { from { transform: scaleX(0); } }

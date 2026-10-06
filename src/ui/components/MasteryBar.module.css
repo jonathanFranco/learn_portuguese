@@ -1,0 +1,16 @@
+.root { display: grid; gap: var(--space-2); }
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); }
+.name { font-weight: 700; }
+.score {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-variant-numeric: tabular-nums;
+}
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  color: var(--ink-soft);
+  font-size: var(--text-xs);
+}

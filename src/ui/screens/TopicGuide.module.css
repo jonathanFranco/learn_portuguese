@@ -1,0 +1,16 @@
+.back {
+  justify-self: start;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-decoration: none;
+}
+.back:hover { color: var(--ink); }
+.summary { font-size: var(--text-md); line-height: 1.6; }
+.more {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--surface-sunken);
+}
+.more summary { cursor: pointer; font-weight: 700; color: var(--brand-strong); }
+.more[open] summary { margin-bottom: var(--space-2); }

@@ -1,0 +1,8 @@
+.root { display: grid; gap: var(--space-3); }
+.mark {
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+  font-weight: 700;
+  padding: 0 0.2em;
+  border-radius: 4px;
+}
